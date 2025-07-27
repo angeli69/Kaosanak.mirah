@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiktok Affiliate Landing Page</title>
+  <meta name="description" content="Dapatkan produk terbaik dari TikTok Shop dengan harga promo! Klik link afiliasi berikut untuk belanja hemat dan dukung kreator favoritmu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ff0050;
+      --secondary: #161823;
+      --bg: #f9fafb;
+      --text: #222;
+      --radius: 18px;
+      --shadow: 0 4px 24px rgba(0,0,0,.09);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      max-width: 410px;
+      margin: 42px auto 0;
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 32px 22px 38px 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .tiktok-logo {
+      width: 62px;
+      margin-bottom: 18px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1);}
+      50% { transform: scale(1.07);}
+      100% { transform: scale(1);}
+    }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin: 0 0 10px 0;
+      color: var(--primary);
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .subtitle {
+      color: #444;
+      font-size: 1.05rem;
+      margin-bottom: 17px;
+      text-align: center;
+    }
+    .affiliate-box {
+      background: #fafbfc;
+      border: 1.5px solid #eee;
+      border-radius: 12px;
+      padding: 15px 13px;
+      margin: 16px 0 22px 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 1.01rem;
+    }
+    .affiliate-link {
+      flex: 1 1 180px;
+      word-break: break-all;
+      color: var(--secondary);
+      background: transparent;
+      border: none;
+      font-size: inherit;
+      outline: none;
+      cursor: pointer;
+      letter-spacing: .03em;
+      margin-right: 6px;
+    }
+    .copy-btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      padding: 7px 15px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background .2s;
+      box-shadow: 0 2px 8px rgba(255,0,80,0.07);
+    }
+    .copy-btn:active {
+      background: #c8003c;
+    }
+    .notif {
+      position: absolute;
+      top: -38px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #22c55e;
+      color: #fff;
+      padding: 7px 18px;
+      border-radius: 19px;
+      font-size: .99rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .26s;
+      z-index: 99;
+      font-weight: 500;
+      box-shadow: 0 2px 10px rgba(34,197,94,0.12);
+    }
+    .notif.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .cta-btn {
+      display: block;
+      width: 100%;
+      background: linear-gradient(90deg, #ff0050 60%, #00f2ea 120%);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 0;
+      font-size: 1.22rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 24px rgba(0,0,0,.08);
+      margin: 10px 0 0 0;
+      transition: transform .11s;
+      letter-spacing: 0.04em;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.09);
+    }
+    .cta-btn:active {
+      transform: scale(0.98);
+    }
+    .desc {
+      margin: 17px 0 0 0;
+      font-size: .98rem;
+      color: #727272;
+      text-align: center;
+    }
+    @media (max-width: 500px) {
+      .container {
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        min-height: 100vh;
+        padding: 25px 5vw 40px 5vw;
+      }
+      .notif {
+        top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <svg class="tiktok-logo" viewBox="0 0 48 48">
+      <!-- TikTok style logo -->
+      <circle cx="24" cy="24" r="24" fill="#fff"/>
+      <path d="M25.5 10v16.1c0 2.3-1.8 4.2-4.1 4.2-2.3 0-4.1-1.9-4.1-4.2s1.8-4.2 4.1-4.2c.5 0 1 .1 1.4.3V16.7c-.5-.1-1-.2-1.5-.2-4.2 0-7.6 3.4-7.6 7.6 0 4.2 3.4 7.6 7.6 7.6 4.2 0 7.6-3.4 7.6-7.6V17c1.2 1 2.6 1.7 4.2 1.8V15.6c-1.3-.1-2.5-.7-3.4-1.6-1-.9-1.7-2.2-1.7-3.7h-4.1z" fill="#ff0050"/>
+      <path d="M30.9 13.3c1.6 1.4 3.7 2.2 6 2.2v-4.1c-.6 0-1.1-.1-1.6-.3-1.6-.6-2.7-2.1-2.7-3.8h-4.1v16.1c0 2.3-1.8 4.2-4.1 4.2v4.1c4.2 0 7.6-3.4 7.6-7.6V13.3z" fill="#00f2ea"/>
+    </svg>
+    <h1>Banjir Promo TikTok Shop!</h1>
+    <div class="subtitle">Belanja produk viral favoritmu dengan harga spesial lewat link ini. Support juga kreator kesayanganmu!</div>
+    <div class="affiliate-box">
+      <input class="affiliate-link" id="affiliateLink" value="https://vt.tokopedia.com/t/ZSSFGF29f/" readonly>
+      <button class="copy-btn" id="copyBtn">Copy</button>
+    </div>
+    <div class="notif" id="notif">Link berhasil disalin!</div>
+    <a href="https://vt.tokopedia.com/t/ZSSFGgUkG/" target="_blank" class="cta-btn">Langsung Belanja Sekarang!</a>
+    <div class="desc">
+      <strong>Tips:</strong> Klik tombol "Copy" untuk share link ini ke temanmu.<br>
+       Terima kasih! 🎉
+    </div>
+  </div>
+  <script>
+    // Copy affiliate link
+    const copyBtn = document.getElementById('copyBtn');
+    const affiliateLink = document.getElementById('affiliateLink');
+    const notif = document.getElementById('notif');
+
+    copyBtn.addEventListener('click', function() {
+      affiliateLink.select();
+      affiliateLink.setSelectionRange(0, 99999); // for mobile
+      document.execCommand('copy');
+
+      notif.classList.add('show');
+      setTimeout(() => notif.classList.remove('show'), 1700);
+    });
+
+    // Optional: select link when user clicks input
+    affiliateLink.addEventListener('click', function() {
+      this.select();
+    });
+  </script>
+</body>
+</html>
